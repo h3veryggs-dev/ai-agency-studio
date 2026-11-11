@@ -207,7 +207,7 @@ p { margin: 0; }
 .scrolly.on .window { border-width: 2px; border-radius: 30px; }
 .scrolly.on .titlebar { height: 60px; padding-left: 26px; } .scrolly.on .tb-title { font-size: 24px; } .scrolly.on .tb-ctl i { width: 84px; }
 .scrolly.on .hl { display: block; position: absolute; border: 3px solid rgb(255 255 255 / .85); border-radius: 12px; background: rgb(255 255 255 / .04); opacity: 0; will-change: opacity; }
-.hl-a { left: 37.1%; top: 21.4%; width: 47.9%; height: 4.2%; } .hl-b { left: 37.1%; top: 26.8%; width: 47.9%; height: 36.8%; } .hl-c { left: 37.1%; top: 68.8%; width: 47.9%; height: 19.4%; }
+.hl-a { left: 37.1%; top: 21.1%; width: 47.9%; height: 4.4%; } .hl-b { left: 37.1%; top: 30.4%; width: 47.9%; height: 36.9%; } .hl-c { left: 37.1%; top: 72.5%; width: 47.9%; height: 19.8%; }
 .scrolly.on .apr { display: block; grid-area: 1 / 1; width: min(760px, 86vw); margin: 0; opacity: 0; border-radius: 16px; overflow: hidden; border: 1px solid rgb(0 200 120 / .55); box-shadow: 0 30px 70px -20px rgb(0 0 0 / .9); will-change: transform, opacity; }
 .scrolly.on .cap, .scrolly.on .rail span { background: rgb(12 16 14 / .6); border: 1px solid rgb(255 255 255 / .14); -webkit-backdrop-filter: blur(16px) saturate(1.2); backdrop-filter: blur(16px) saturate(1.2); }
 .scrolly.on .cap { display: grid; position: absolute; left: var(--edge); bottom: var(--edge); width: min(440px, calc(100% - 2 * var(--edge))); padding: 18px 20px; border-radius: 18px; }

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="AI Agency Studio para Windows: um agente de IA que planeja, usa ferramentas de verdade nos seus arquivos e pede a sua aprovação para o que é arriscado.">
+<title>AI Agency Studio para Windows</title>
+<link rel="icon" href="assets/icone.svg" type="image/svg+xml">
+<link rel="stylesheet" href="site.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+<canvas id="fog" aria-hidden="true"></canvas>
+<a class="skip" href="#baixar">Pular para o download</a>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#topo" aria-label="AI Agency Studio, início">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 8l4 2.3v4.4L12 17l-4-2.3v-4.4z"/></svg>
+      <span>AI Agency Studio</span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#recursos">Recursos</a>
+      <a href="#privacidade">Privacidade</a>
+      <a href="#celular">Celular</a>
+      <a href="#requisitos">Requisitos</a>
+    </nav>
+    <a class="nav-cta" href="#baixar">Baixar <span aria-hidden="true">↓</span></a>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+</header>
+
+<main id="topo">
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <p class="hero-eyebrow">AI AGENCY STUDIO</p>
+        <h1 id="h-hero" class="hero-h1"><span>Das ideias.</span> <em>Aos fluxos de trabalho inteligentes.</em></h1>
+      </div>
+      <div class="hero-copy">
+        <p>Reúna o espaço de trabalho de IA, as ferramentas, as Skills e os fluxos em um só ambiente, desenhado para você ter mais controle sobre o que a IA faz.</p>
+        <a class="hero-cta" href="#recursos">Explorar o AI Agency Studio</a>
+      </div>
+    </div>
+    <p class="vh">Demonstração visual e ilustrativa: seis telas do AI Agency Studio atravessam uma linha de varredura e se transformam em texto estruturado. Não são dados reais de uso.</p>
+
+    <div class="belt" aria-hidden="true">
+      <div class="codes">
+        <div class="code"><div class="html">&lt;section class="workspace"&gt;
+  &lt;h1&gt;AI Agency Studio&lt;/h1&gt;
+  &lt;p&gt;Um ambiente para fluxos de IA.&lt;/p&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Espaço&lt;/h2&gt;
+    &lt;p&gt;Projetos e recursos&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Atividade&lt;/h2&gt;
+    &lt;p&gt;Informação organizada&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</div><div class="meta">&lt;!-- workspace: AI Agency Studio --&gt;
+&lt;!-- stage: demonstração --&gt;
+&lt;!-- type: workflow --&gt;</div></div>
+        <div class="code"><div class="html">&lt;section class="workflow-plan"&gt;
+  &lt;h1&gt;Plano da tarefa&lt;/h1&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Entender o pedido&lt;/li&gt;
+    &lt;li&gt;Organizar o trabalho&lt;/li&gt;
+    &lt;li&gt;Identificar os recursos&lt;/li&gt;
+    &lt;li&gt;Preparar o resultado&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/section&gt;</div><div class="meta">&lt;!-- workspace: AI Agency Studio --&gt;
+&lt;!-- stage: demonstração --&gt;
+&lt;!-- type: workflow --&gt;</div></div>
+        <div class="code"><div class="html">&lt;section class="agent-workflow"&gt;
+  &lt;h1&gt;Agentes&lt;/h1&gt;
+  &lt;p&gt;Trabalho organizado&lt;/p&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Agente&lt;/h2&gt;
+    &lt;p&gt;Responsabilidade atribuída&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Ferramentas&lt;/h2&gt;
+    &lt;p&gt;Recursos disponíveis&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</div><div class="meta">&lt;!-- workspace: AI Agency Studio --&gt;
+&lt;!-- stage: demonstração --&gt;
+&lt;!-- type: workflow --&gt;</div></div>
+        <div class="code"><div class="html">&lt;section class="resources"&gt;
+  &lt;h1&gt;Ferramentas e Skills&lt;/h1&gt;
+  &lt;p&gt;Recursos do espaço de trabalho&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Skills instaladas&lt;/li&gt;
+    &lt;li&gt;Ferramentas disponíveis&lt;/li&gt;
+    &lt;li&gt;Recursos do projeto&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;</div><div class="meta">&lt;!-- workspace: AI Agency Studio --&gt;
+&lt;!-- stage: demonstração --&gt;
+&lt;!-- type: workflow --&gt;</div></div>
+        <div class="code"><div class="html">&lt;section class="execution"&gt;
+  &lt;h1&gt;Execução do fluxo&lt;/h1&gt;
+  &lt;p&gt;Processo de trabalho estruturado&lt;/p&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Etapa atual&lt;/h2&gt;
+    &lt;p&gt;Demonstração&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Saída&lt;/h2&gt;
+    &lt;p&gt;Resultado para revisar&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</div><div class="meta">&lt;!-- workspace: AI Agency Studio --&gt;
+&lt;!-- stage: demonstração --&gt;
+&lt;!-- type: workflow --&gt;</div></div>
+        <div class="code"><div class="html">&lt;section class="project-results"&gt;
+  &lt;h1&gt;Recursos do projeto&lt;/h1&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Projeto organizado&lt;/h2&gt;
+  &lt;/article&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Arquivos estruturados&lt;/h2&gt;
+  &lt;/article&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Resultado pronto&lt;/h2&gt;
+  &lt;/article&gt;
+&lt;/section&gt;</div><div class="meta">&lt;!-- workspace: AI Agency Studio --&gt;
+&lt;!-- stage: demonstração --&gt;
+&lt;!-- type: workflow --&gt;</div></div>
+      </div>
+
+      <div class="cards">
+        <article class="card c1">
+          <div class="bgimg"></div>
+          <div class="k-nav"><span class="k-brand"><svg viewBox="0 0 24 24"><path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1z"/><path d="M12 8l4 2.3v4.4L12 17l-4-2.3v-4.4z"/></svg>AI Agency Studio</span><span class="k-menu"><i class="on">ESPAÇO</i><i>AGENTES</i><i>PROJETOS</i></span></div>
+          <div class="k1-main">
+            <div class="k1-side"><b>Projetos</b><span>Agentes</span><span>Skills</span><span>Prompts</span><span>Memória</span></div>
+            <div class="k1-body"><p class="ct">Loja online</p>
+              <ul><li><i class="d ok"></i><span>Corrigir o cálculo do carrinho</span><em>demonstração</em></li><li><i class="d"></i><span>Organizar a pasta de notas fiscais</span><em>demonstração</em></li></ul>
+              <div class="k1-act"><small>ATIVIDADE (EXEMPLO)</small><code>list_dir .</code><code>run_command node test.js</code></div>
+            </div>
+          </div>
+          <div class="k1-foot"><div class="k1-g"><small>ESPAÇO</small><b>Pastas autorizadas</b></div><div class="k1-g"><small>AMBIENTE</small><b>Local, no seu PC</b></div><p>Tudo o que o seu fluxo de IA precisa, em um só espaço.</p></div>
+        </article>
+
+        <article class="card c2">
+          <div class="k-nav"><span class="k-brand"><svg viewBox="0 0 24 24"><path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1z"/><path d="M12 8l4 2.3v4.4L12 17l-4-2.3v-4.4z"/></svg>AI Agency Studio</span><span class="k-menu"><i>ESPAÇO</i><i class="on">PLANO</i><i>RESULTADO</i></span></div>
+          <div class="k2-main"><small>PLANO DA TAREFA</small><p class="ct">Corrigir o cálculo do carrinho sem alterar test.js</p>
+            <ol><li><span class="n">1</span><code>list_dir</code><span class="t">ler a pasta</span><em class="ok">feito</em></li><li><span class="n">2</span><code>run_command</code><span class="t">rodar os testes</span><em class="bad">falhou</em></li><li><span class="n">3</span><code>edit_file</code><span class="t">corrigir cart.js</span><em class="ok">feito</em></li><li><span class="n">4</span><code>run_command</code><span class="t">rodar os testes</span><em class="ok">feito</em></li></ol>
+          </div>
+          <div class="k2-foot"><span class="pill">PLANO PRONTO</span><div class="seg"><i></i><i></i><i></i><i></i></div></div>
+        </article>
+
+        <article class="card c3">
+          <div class="bgimg"></div>
+          <div class="k-nav"><span class="k-brand"><svg viewBox="0 0 24 24"><path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1z"/><path d="M12 8l4 2.3v4.4L12 17l-4-2.3v-4.4z"/></svg>AI Agency Studio</span><span class="k-menu"><i class="on">AGENTES</i><i>SKILLS</i><i>FERRAMENTAS</i></span></div>
+          <div class="k3-main"><small>AGENTES</small><p class="ct">Um espaço. Vários agentes especializados.</p>
+            <div class="k3-row"><div><span class="av">S</span><b>Superagent</b><small>Perfil com instruções próprias</small></div><div><span class="av">P</span><b>Programador</b><small>Perfil com instruções próprias</small></div><div><span class="av">A</span><b>Analista</b><small>Perfil com instruções próprias</small></div></div>
+          </div>
+          <div class="k3-foot"><div><small>AGENTE</small><b>Instruções próprias</b></div><div><small>SKILLS</small><b>Sempre, automática ou desligada</b></div><div><small>FERRAMENTAS</small><b>Com a sua aprovação</b></div></div>
+        </article>
+
+        <article class="card c4">
+          <div class="k-nav"><span class="k-brand"><svg viewBox="0 0 24 24"><path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1z"/><path d="M12 8l4 2.3v4.4L12 17l-4-2.3v-4.4z"/></svg>AI Agency Studio</span><span class="k-menu"><i class="on">FERRAMENTAS</i><i>SKILLS</i><i>RECURSOS</i></span></div>
+          <div class="k4-tiles"><div class="t1"></div><div class="t2"></div><div class="t3"><p>Ferramentas poderosas. <em>Um fluxo moldado para a tarefa.</em></p></div></div>
+          <div class="k4-foot"><span>Ferramentas, Skills e recursos</span><span>Explorar o espaço</span></div>
+        </article>
+
+        <article class="card c5">
+          <div class="bgimg"></div>
+          <div class="k-nav"><span class="k-brand"><svg viewBox="0 0 24 24"><path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1z"/><path d="M12 8l4 2.3v4.4L12 17l-4-2.3v-4.4z"/></svg>AI Agency Studio</span><span class="k-menu"><i class="on">EXECUÇÃO</i><i>ATIVIDADE</i><i>SAÍDA</i></span></div>
+          <p class="k5-h ct">O trabalho por trás <em>de cada resultado.</em></p>
+          <dl class="k5-list"><div><dt>Tarefa</dt><dd>Fluxo estruturado</dd></div><div><dt>Estado</dt><dd>Demonstração</dd></div><div><dt>Saída</dt><dd>Resultado gerado</dd></div></dl>
+        </article>
+
+        <article class="card c6">
+          <div class="k-nav"><span class="k-brand"><svg viewBox="0 0 24 24"><path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1z"/><path d="M12 8l4 2.3v4.4L12 17l-4-2.3v-4.4z"/></svg>AI Agency Studio</span><span class="k-menu"><i>PROJETOS</i><i>ARQUIVOS</i><i class="on">RESULTADOS</i></span></div>
+          <p class="k6-h ct">Do trabalho <em>aos resultados prontos.</em></p>
+          <div class="k6-posts"><div><div class="th th1"></div><small>PROJETO</small><b>Recursos organizados</b></div><div><div class="th th2"></div><small>ARQUIVOS</small><b>Cada alteração guarda uma cópia antes</b></div><div><div class="th th3"></div><small>SAÍDA</small><b>Trabalho pronto para revisar</b></div></div>
+        </article>
+      </div>
+      <canvas class="fx"></canvas>
+    </div>
+
+    <div class="scan" aria-hidden="true"><b></b><i></i></div>
+    <div class="badge" aria-hidden="true"><span class="lab">Transformação do fluxo</span><span class="pill"><span class="n">01 / 06</span><span class="s">ESPAÇO</span></span></div>
+    <button type="button" class="belt-pause" aria-pressed="false">Pausar animação</button>
+  </section>
+
+  <section class="about wrap reveal" aria-labelledby="h-sobre">
+    <h2 id="h-sobre" class="vh">O que é o AI Agency Studio</h2>
+    <p class="statement">Um aplicativo para Windows que conecta o modelo de IA às suas pastas. Ele lê, edita e roda comandos, <span class="dim">só onde você autorizou.</span></p>
+  </section>
+
+  <section id="dentro" class="inside" aria-labelledby="h-dentro">
+    <header class="sec-head reveal wrap"><h2 id="h-dentro">Veja por dentro.</h2><p>Role a página: a câmera percorre a interface real, com uma conversa de exemplo.</p></header>
+    <div class="scrolly">
+      <div class="scrolly-pin">
+        <figure class="cam">
+          <div class="window">
+            <div class="titlebar" aria-hidden="true"><span class="tb-title">AI Agency Studio</span><span class="tb-ctl"><i class="min"></i><i class="max"></i><i class="cls"></i></span></div>
+            <div class="screen">
+              <img src="assets/app-conversa.png" width="1440" height="900" loading="lazy" alt="Janela do AI Agency Studio: o agente Programador mostra o plano da tarefa, os comandos que executou com argumentos e resultados (um teste falhando e depois passando) e a explicação da correção no código.">
+              <i class="hl hl-a" aria-hidden="true"></i><i class="hl hl-b" aria-hidden="true"></i><i class="hl hl-c" aria-hidden="true"></i>
+            </div>
+          </div>
+        </figure>
+        <figure class="apr" aria-hidden="true"><img src="assets/aprovacao.png" width="690" height="224" alt="Pedido de aprovação real: o agente quer criar o arquivo relatorio.md e espera Permitir, Permitir nesta conversa ou Negar."></figure>
+        <div class="cap" aria-hidden="true">
+          <p class="c on"><b>Plano antes de agir.</b><span>Em tarefas maiores, o agente diz o que vai fazer e como vai conferir.</span></p>
+          <p class="c"><b>Cada ferramenta à vista.</b><span>Argumentos e resultado de cada leitura, edição e comando.</span></p>
+          <p class="c"><b>Você aprova o que é arriscado.</b><span>Escrever, executar, instalar, apagar e sair das pastas autorizadas pedem a sua aprovação.</span></p>
+          <p class="c"><b>Evidência no fim.</b><span>Ele só conclui quando o resultado comprova, como o teste passando.</span></p>
+        </div>
+        <div class="rail" aria-hidden="true"><span class="on" data-n="1"><i>1</i>Plano</span><span data-n="2"><i>2</i>Ferramentas</span><span data-n="3"><i>3</i>Aprovação</span><span data-n="4"><i>4</i>Evidência</span></div>
+        <i class="sbar" aria-hidden="true"></i>
+      </div>
+    </div>
+    <ol class="legend wrap">
+      <li><b>Plano antes de agir.</b> Em tarefas maiores, o agente diz o que vai fazer e como vai conferir.</li>
+      <li><b>Cada ferramenta à vista.</b> Argumentos e resultado de cada leitura, edição e comando.</li>
+      <li><b>Evidência no fim.</b> Ele só conclui quando o resultado comprova, como o teste passando.</li>
+    </ol>
+  </section>
+
+  <div class="wave-line" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="wg1" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#00c878" stop-opacity="0"/><stop offset=".5" stop-color="#00c878" stop-opacity=".85"/><stop offset="1" stop-color="#00c878" stop-opacity="0"/></linearGradient></defs><path class="wa" d="M0 60 L1440 60" stroke="url(#wg1)" vector-effect="non-scaling-stroke"/><path class="wb" d="M0 60 L1440 60" stroke="url(#wg1)" vector-effect="non-scaling-stroke"/></svg></div>
+  <section id="recursos" class="features wrap" aria-labelledby="h-recursos">
+    <header class="sec-head reveal">
+      <h2 id="h-recursos">Feito para trabalhar, não só para conversar.</h2>
+      <p>Tudo abaixo existe no aplicativo hoje.</p>
+    </header>
+    <div class="bento">
+      <article class="tile t-files reveal" data-par="-14">
+        <h3>Trabalha nos seus arquivos</h3>
+        <p>Lê, busca, cria e edita arquivos nas pastas que você autorizar. Cada alteração guarda uma cópia antes: dá para comparar e desfazer.</p>
+        <ul class="tools" aria-label="Ferramentas de arquivo">
+          <li><code class="tool">list_dir</code></li><li><code class="tool">read_file</code></li><li><code class="tool">search_text</code></li><li><code class="tool">write_file</code></li><li><code class="tool">edit_file</code></li><li><code class="tool">make_dir</code></li><li><code class="tool">delete_path</code></li>
+        </ul>
+      </article>
+      <article class="tile t-cmd reveal" data-par="18">
+        <h3>Roda comandos, sem shell</h3>
+        <p>Só programas de uma lista que você controla, como Node, npm, Python, pip e Git, com os argumentos separados e tempo limite.</p>
+        <ul class="tools" aria-label="Ferramenta de comando"><li><code class="tool">run_command</code></li></ul>
+      </article>
+      <article class="tile t-approve reveal" data-par="-10">
+        <h3>Você aprova o que é arriscado</h3>
+        <p>Escrever, executar, instalar, apagar e sair das pastas autorizadas pedem a sua aprovação, e você vê o que vai acontecer antes de decidir.</p>
+        <img src="assets/aprovacao.png" width="690" height="224" loading="lazy" alt="Pedido de aprovação real: o agente quer criar o arquivo relatorio.md e mostra o caminho e o conteúdo, com os botões Permitir, Permitir nesta conversa e Negar.">
+      </article>
+      <article class="tile t-agents reveal" data-par="14">
+        <h3>Agentes e Skills</h3>
+        <p>Perfis com instruções próprias (vêm três: Superagent, Programador e Analista) e Skills que entram sempre, só quando são relevantes ou nunca. Importe Skills de arquivos <code>.md</code>.</p>
+        <img src="assets/skills.png" width="710" height="248" loading="lazy" alt="Lista de Skills com o modo de cada uma: Sempre, Automática ou Desligada, e a versão de cada Skill.">
+      </article>
+      <article class="tile t-perm reveal" data-par="-16">
+        <h3>Regras por tipo de ação</h3>
+        <p>Ler é automático por padrão. Para cada categoria, você escolhe entre automático, perguntar ou bloquear.</p>
+        <img src="assets/permissoes.png" width="710" height="129" loading="lazy" alt="Configurações de permissões: ler arquivos em Automático; criar ou editar arquivos e executar comandos em Perguntar.">
+      </article>
+      <article class="tile t-ctx reveal" data-par="12">
+        <h3>Projetos, memória e contexto</h3>
+        <p>Cada projeto aponta para uma pasta real. Conversas longas são resumidas para caber no modelo. Também aceita anexos de imagem, vídeo e texto, e exporta a conversa em Markdown.</p>
+        <ul class="mem" aria-label="O que a memória guarda e onde">
+          <li><span>Guarda</span><span class="chip">fato</span><span class="chip">decisão</span><span class="chip">restrição</span><span class="chip">tarefa</span><span class="chip">progresso</span></li>
+          <li><span>Vale para</span><span class="chip">esta conversa</span><span class="chip">o projeto</span><span class="chip">todas</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="baixar" class="download wrap" aria-labelledby="h-baixar" tabindex="-1">
+    <div class="reveal">
+      <div class="dl-panel" data-download-group>
+        <div class="dl-main">
+          <h2 id="h-baixar">Baixe para Windows</h2>
+          <p class="dl-sub">Um arquivo, um clique para instalar. O app abre sozinho quando termina.</p>
+          <a class="btn btn-primary btn-xl" data-download href="https://github.com/h3veryggs-dev/ai-agency-studio/releases/download/v11.2.2/AI-Agency-Studio-Setup-11.2.2.exe" download="AI-Agency-Studio-Setup-11.2.2.exe">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m-4.5-4.5L12 15l4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Baixar para Windows</span><span class="btn-size"><span data-campo="TAMANHO_MB">106,9</span> MB</span>
+          </a>
+          <p class="status" data-download-status role="status" aria-live="polite"></p>
+          <p class="trust">O instalador ainda não tem assinatura digital, então o Windows SmartScreen pode avisar que o editor é desconhecido. Baixe só por esta página e confira o SHA-256 abaixo antes de executar. Se ele conferir, o aviso pode ser liberado em Mais informações.</p>
+        </div>
+        <dl class="specs">
+          <div><dt>Versão</dt><dd data-campo="VERSAO">11.2.2</dd></div>
+          <div><dt>Tamanho</dt><dd><span data-campo="TAMANHO_MB">106,9</span> MB</dd></div>
+          <div><dt>Sistema</dt><dd>Windows 10 ou 11</dd></div>
+          <div><dt>Arquitetura</dt><dd>64 bits (x64)</dd></div>
+          <div><dt>Arquivo</dt><dd><code data-campo="ARQUIVO">AI-Agency-Studio-Setup-11.2.2.exe</code></dd></div>
+          <div><dt>Atualizado em</dt><dd data-campo="DATA">11 de novembro de 2026</dd></div>
+          <div class="sha"><dt>SHA-256</dt><dd><code class="hash" data-sha data-campo="SHA256">5122c9d3e5f5ffbcbd591780f5c46d8bff4561cadc832f268b3e81e600d70066</code><button type="button" class="copy" data-copy-sha>Copiar</button></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-line" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="wg2" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#00c878" stop-opacity="0"/><stop offset=".5" stop-color="#00c878" stop-opacity=".85"/><stop offset="1" stop-color="#00c878" stop-opacity="0"/></linearGradient></defs><path class="wa" d="M0 60 L1440 60" stroke="url(#wg2)" vector-effect="non-scaling-stroke"/><path class="wb" d="M0 60 L1440 60" stroke="url(#wg2)" vector-effect="non-scaling-stroke"/></svg></div>
+  <section id="instalar" class="install wrap" aria-labelledby="h-instalar">
+    <header class="sec-head reveal"><h2 id="h-instalar">Pronto em três passos.</h2></header>
+    <ol class="steps">
+      <li class="step reveal"><h3>Baixe o instalador</h3><p>Um único arquivo <code>.exe</code>. Confira o SHA-256 se quiser ter certeza de que é o original.</p></li>
+      <li class="step reveal"><h3>Execute o arquivo</h3><p>A instalação é de um clique, sem assistente, só para o seu usuário. Cria atalhos e abre o app ao terminar.</p></li>
+      <li class="step reveal"><h3>Conecte o provedor de IA</h3><p>Em Configurações, informe o endereço do provedor (o padrão é o FreeLLMAPI no próprio PC), escolha o modelo e autorize as pastas de trabalho.</p></li>
+    </ol>
+  </section>
+
+  <section id="celular" class="mobile wrap" aria-labelledby="h-celular">
+    <div class="mobile-in reveal">
+      <div class="mobile-text">
+        <h2 id="h-celular">Também do celular, pelo seu PC.</h2>
+        <p>Use o agente do seu computador pelo navegador do celular, de casa ou de fora, através da sua rede Tailscale. O aplicativo Android está em desenvolvimento.</p>
+        <ol class="mini-steps">
+          <li>Instale o Tailscale no PC e no celular.</li>
+          <li>Entre com a mesma conta nos dois.</li>
+          <li>No app do PC, ligue o Acesso pelo celular (vem desligado).</li>
+          <li>Pareie o celular lendo o QR code.</li>
+        </ol>
+        <p class="small">O PC só aceita aparelhos pareados, pela sua rede Tailscale. Comandos e ações de risco pedidos pelo celular só podem ser aprovados no PC, e você desconecta um aparelho a qualquer momento. A proteção depende de você manter a conta do Tailscale segura.</p>
+      </div>
+      <div class="mobile-shots">
+        <img class="phone" src="assets/celular-conversa.png" width="390" height="844" loading="lazy" alt="A mesma interface no celular: a conversa com o plano e os passos do agente, em tela estreita.">
+        <img class="pair" src="assets/celular-pareamento.png" width="760" height="936" loading="lazy" alt="Painel Acesso pelo celular no PC: acesso ligado, QR code e código de pareamento de 8 caracteres, válido por 5 minutos.">
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-line" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="wg3" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#00c878" stop-opacity="0"/><stop offset=".5" stop-color="#00c878" stop-opacity=".85"/><stop offset="1" stop-color="#00c878" stop-opacity="0"/></linearGradient></defs><path class="wa" d="M0 60 L1440 60" stroke="url(#wg3)" vector-effect="non-scaling-stroke"/><path class="wb" d="M0 60 L1440 60" stroke="url(#wg3)" vector-effect="non-scaling-stroke"/></svg></div>
+  <section id="privacidade" class="privacy wrap" aria-labelledby="h-privacidade">
+    <header class="sec-head reveal"><h2 id="h-privacidade">Privacidade e controle.</h2><p>O que fica no seu PC, o que sai dele e para onde, sem letras miúdas.</p></header>
+    <div class="facts">
+      <div class="fact reveal"><h3>Onde o trabalho acontece</h3><p>No seu PC, só nas pastas que você autorizar. Os arquivos não são enviados inteiros: vai para o modelo apenas o que o agente lê.</p></div>
+      <div class="fact reveal"><h3>O que vai para o provedor de IA</h3><p>Suas mensagens, as instruções do agente e das Skills ativas, a memória relevante, os resultados das ferramentas (trechos lidos, saídas de comandos) e os anexos.</p></div>
+      <div class="fact reveal"><h3>Para onde vai</h3><p>Para o endereço compatível com a API da OpenAI que você configurar. O padrão é o FreeLLMAPI rodando no seu PC; se ele repassa os pedidos a provedores na internet, esses dados seguem para eles.</p></div>
+      <div class="fact reveal"><h3>Sua chave e seus dados</h3><p>Ficam no seu computador, na pasta <code>%APPDATA%\AI Agency Studio\data</code>. A chave de API não aparece na interface nem vai para o celular. O código do app não envia telemetria.</p></div>
+      <div class="fact reveal"><h3>Apagar seus dados</h3><p>Desinstalar o app não apaga seus dados: para removê-los, apague a pasta acima. Eles ficam guardados até você fazer isso.</p></div>
+      <div class="fact reveal"><h3>Este site</h3><p>Não usa cookies, rastreadores, análise de acesso nem formulários, e não guarda nada sobre você. O download é um arquivo direto. A hospedagem da página pode registrar o acesso (como o endereço IP) nos próprios registros dela.</p></div>
+      <div class="fact reveal"><h3>Aprovações e desfazer</h3><p>Ler é automático; escrever, executar, instalar, apagar e sair das pastas pedem aprovação, e você ajusta cada regra. Tudo que muda arquivo pode ser desfeito.</p></div>
+    </div>
+  </section>
+
+  <section id="requisitos" class="reqs wrap" aria-labelledby="h-requisitos">
+    <header class="sec-head reveal"><h2 id="h-requisitos">Requisitos</h2><p>O que o seu PC precisa ter.</p></header>
+    <dl class="req-list reveal">
+      <div><dt>Sistema</dt><dd>Windows 10 ou 11, 64 bits (x64).</dd></div>
+      <div><dt>Espaço</dt><dd>Cerca de 330 MB depois de instalado.</dd></div>
+      <div><dt>Modelo de IA</dt><dd>Um provedor compatível com a API da OpenAI. O padrão é o FreeLLMAPI em <code>127.0.0.1:31415</code>. Para analisar imagens, o modelo precisa aceitar imagens.</dd></div>
+      <div><dt>Opcional</dt><dd><code>ffmpeg</code> e <code>ffprobe</code> no PATH para anexos de vídeo; Node, Python ou Git instalados para o agente poder usá-los.</dd></div>
+      <div><dt>Celular</dt><dd>Tailscale no PC e no celular, com a mesma conta.</dd></div>
+    </dl>
+  </section>
+  <div class="wave-line" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="wg4" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#00c878" stop-opacity="0"/><stop offset=".5" stop-color="#00c878" stop-opacity=".85"/><stop offset="1" stop-color="#00c878" stop-opacity="0"/></linearGradient></defs><path class="wa" d="M0 60 L1440 60" stroke="url(#wg4)" vector-effect="non-scaling-stroke"/><path class="wb" d="M0 60 L1440 60" stroke="url(#wg4)" vector-effect="non-scaling-stroke"/></svg></div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-mark" aria-hidden="true">AI Agency Studio</p>
+    <div class="foot-in">
+      <a class="foot-dl" href="#baixar">Baixar para Windows</a>
+      <a class="foot-link" href="#privacidade">Privacidade</a>
+      <span>Versão <span data-campo="VERSAO">11.2.2</span> · <span data-campo="DATA">11 de novembro de 2026</span></span>
+      <span>Software proprietário. © <span data-campo="ANO">2026</span> AI Agency Studio. Versão de teste.</span>
+    </div>
+    <p class="legal">As imagens desta página são capturas do próprio aplicativo e as fontes são as do seu sistema. Não há scripts, imagens ou fontes de terceiros. O instalador inclui as licenças do Electron e do Chromium (<code>LICENSE.electron.txt</code> e <code>LICENSES.chromium.html</code>), componentes de código aberto usados pelo aplicativo.</p>
+  </div>
+</footer>
+</body>
+</html>

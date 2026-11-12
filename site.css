@@ -431,3 +431,98 @@ html.cur-down .cur-ring { border-color: #7af0bd; background: rgb(79 204 146 / .1
   .btn-primary:hover::before, .nav-cta:hover::before { transform: none; }
 }
 .btn-primary:active, .nav-cta:active { transform: scale(.965, .93); transition-duration: .14s, .35s, .3s, .3s, .45s; }
+
+/* ===== Vidro v2: um só material em todos os botões, com luz própria =====
+   Referência: kit Liquid Glass iOS 26 (Regular: blur 6, luz a 315°). O vidro fica mais claro que o fundo, quase sem desfoque,
+   com um fio de luz na borda (forte no canto de cima à esquerda e no de baixo à direita) e sombra suave por baixo. */
+.hero-cta, .btn:not(.btn-primary), .nav nav a, .belt-pause, .copy, .btn-primary, .nav-cta {
+  -webkit-backdrop-filter: blur(6px) saturate(1.8) brightness(1.3); backdrop-filter: blur(6px) saturate(1.8) brightness(1.3);
+}
+/* vidro neutro */
+.btn:not(.btn-primary), .nav nav a, .belt-pause, .copy { border-color: transparent;
+  background: linear-gradient(135deg, rgb(255 255 255 / .24) 0%, rgb(255 255 255 / .08) 36%, rgb(255 255 255 / .06) 64%, rgb(255 255 255 / .16) 100%);
+  box-shadow: inset 0 1px 1px rgb(255 255 255 / .38), inset 0 -10px 16px -12px rgb(255 255 255 / .16), inset 0 0 14px rgb(255 255 255 / .07), 0 10px 24px -12px rgb(0 0 0 / .75); }
+/* vidro verde (ação principal) */
+.hero-cta, .btn-primary, .nav-cta { border-color: transparent; color: #f7fffb; text-shadow: 0 1px 2px rgb(0 40 22 / .45);
+  background: linear-gradient(135deg, rgb(130 255 195 / .55) 0%, rgb(40 215 145 / .30) 38%, rgb(25 195 125 / .24) 64%, rgb(100 250 180 / .42) 100%);
+  box-shadow: inset 0 1px 1px rgb(255 255 255 / .6), inset 0 -10px 18px -12px rgb(190 255 225 / .3), inset 0 0 18px rgb(150 255 210 / .18), 0 12px 30px -10px rgb(0 220 130 / .6); }
+/* aro de luz (a 315°) em todos; os dois botões de baixar mantêm o aro que gira com o ponteiro */
+.hero-cta::after, .btn:not(.btn-primary)::after, .nav nav a::after, .belt-pause::after, .copy::after {
+  inset: 0; z-index: 1; opacity: 1; border-radius: inherit; padding: 1px;
+  background: linear-gradient(135deg, rgb(255 255 255 / .9) 0%, rgb(255 255 255 / .16) 28%, rgb(255 255 255 / .07) 60%, rgb(255 255 255 / .55) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude; }
+@media (hover: hover) and (pointer: fine) {
+  .btn:not(.btn-primary):hover, .nav nav a:hover, .belt-pause:hover, .copy:hover { border-color: transparent;
+    background: linear-gradient(135deg, rgb(255 255 255 / .32) 0%, rgb(255 255 255 / .12) 36%, rgb(255 255 255 / .09) 64%, rgb(255 255 255 / .22) 100%);
+    box-shadow: inset 0 1px 1px rgb(255 255 255 / .5), inset 0 -10px 16px -12px rgb(255 255 255 / .2), inset 0 0 16px rgb(255 255 255 / .1), 0 14px 28px -12px rgb(0 0 0 / .8); }
+  .hero-cta:hover { border-color: transparent;
+    background: linear-gradient(135deg, rgb(150 255 205 / .65) 0%, rgb(55 225 155 / .38) 38%, rgb(35 205 135 / .3) 64%, rgb(120 255 190 / .5) 100%);
+    box-shadow: inset 0 1px 1px rgb(255 255 255 / .7), inset 0 -10px 18px -12px rgb(190 255 225 / .4), inset 0 0 22px rgb(150 255 210 / .26), 0 16px 34px -10px rgb(0 225 135 / .7); }
+}
+.nav nav a[aria-current="true"] { background: linear-gradient(135deg, rgb(130 255 195 / .38), rgb(40 215 145 / .14)); }
+
+/* ===== Luz verde atrás do vidro =====
+   O vidro só aparece quando há algo atrás dele para desfocar e realçar. Cada botão verde ganha uma luz suave no elemento de fora,
+   pintada ANTES do botão (por isso o backdrop-filter do botão a enxerga). Decorativa: sem eventos, sem animação própria além da entrada do hero. */
+.hero-copy { position: relative; }
+.hero-copy::before, .dl-sub::after, .nav-in::before { content: ""; position: absolute; pointer-events: none;
+  background: radial-gradient(closest-side, rgb(60 235 160 / .5), rgb(0 205 125 / .2) 58%, rgb(0 190 115 / 0) 100%); }
+.hero-copy::before { left: -34px; bottom: -34px; width: 280px; height: 120px; animation: risein 1.1s cubic-bezier(.2, .8, .2, 1) .64s backwards; }
+.dl-sub { position: relative; }
+.dl-sub::after { left: -30px; top: calc(100% + 50px); width: 410px; height: 130px; transform: translateY(-50%); }
+.nav-in::before { right: calc(var(--edge) - 36px); top: 50%; width: 160px; height: 84px; transform: translateY(-50%); }
+@media (max-width: 440px) { .dl-sub::after { width: calc(100% + 60px); } }
+
+/* ===== Cartório escuro (2026-11-12) =====
+   Mundo novo sobre a base existente: papel de segurança escuro (carvão esverdeado com guilhoché que deriva na rolagem), esmeralda como tinta de carimbo,
+   títulos em Young Serif (servida pelo próprio site, licença OFL). Neblina, correia, Veja por dentro e vidro continuam como estavam. */
+@font-face { font-family: "Young Serif"; src: url("assets/young-serif.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+:root {
+  --serif: "Young Serif", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --bg: #0a0f0c; --t2: #bac5bd; --t3: #9aa79e;
+  --line: rgb(160 235 195 / .24); --line-soft: rgb(160 235 195 / .13); --cell: rgb(12 20 15 / .64); --cell-hi: rgb(20 32 25 / .74);
+}
+html { scrollbar-color: #2b3a31 #0a0f0c; }
+::selection { background: rgb(79 204 146 / .45); color: #fff; }
+
+/* papel de segurança: anéis finos de guilhoché cobrem a janela e sobem devagar com a rolagem (só transform, composto na GPU) */
+body::after { content: ""; position: fixed; left: 0; top: 0; width: 100%; height: calc(100vh + 640px); z-index: 0; pointer-events: none; opacity: .75; will-change: transform;
+  transform: translate3d(0, calc(var(--gy, 0) * -1px), 0);
+  background:
+    repeating-radial-gradient(circle at 12% 22%, transparent 0 15px, rgb(120 235 180 / .045) 15px 16px),
+    repeating-radial-gradient(circle at 88% 62%, transparent 0 19px, rgb(120 235 180 / .04) 19px 20px),
+    repeating-radial-gradient(circle at 50% 118%, transparent 0 23px, rgb(120 235 180 / .035) 23px 24px); }
+
+/* tipografia de certidão: serifa firme nos títulos, sem itálico forçado */
+.hero-h1, .sec-head h2, .statement, .dl-main h2, .mobile-text h2, .foot-mark { font-family: var(--serif); font-weight: 400; letter-spacing: -.02em; }
+.hero-h1 { font-size: clamp(34px, 4.4vw, 68px); line-height: 1.04; }
+.sec-head h2 { line-height: 1.08; }
+.statement { line-height: 1.22; }
+.tile h3, .fact h3, .step h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -.01em; }
+.step::before { font-family: var(--serif); font-weight: 400; }
+
+/* moldura de certidão: um filete interno recuado nos painéis grandes */
+.dl-panel { position: relative; outline: 1px solid rgb(160 235 195 / .16); outline-offset: -9px; }
+.tile:hover { box-shadow: 0 18px 40px -22px rgb(0 0 0 / .9), inset 0 0 0 1px rgb(79 204 146 / .25); }
+
+/* carimbo: bate (cresce de fora para dentro com quique), solta uma onda de tinta e fica um pouco inclinado */
+.stamp { position: absolute; z-index: 3; width: clamp(108px, 12vw, 150px); aspect-ratio: 1; border-radius: 50%; border: 2.5px solid var(--acc); color: var(--acc-text);
+  display: grid; place-content: center; gap: 4px; text-align: center; pointer-events: none; background: rgb(10 15 12 / .55);
+  opacity: 0; transform: rotate(-13deg) scale(1); transform-origin: 60% 50%; }
+.stamp::before { content: ""; position: absolute; inset: 6px; border-radius: 50%; border: 1px dashed rgb(110 224 168 / .7); }
+.stamp::after { content: ""; position: absolute; inset: -2px; border-radius: 50%; border: 2px solid var(--acc); opacity: 0; }
+.stamp b { font: 400 clamp(15px, 1.6vw, 19px)/1 var(--serif); letter-spacing: .08em; text-transform: uppercase; }
+.stamp span { font: 600 10.5px/1.25 var(--font); letter-spacing: .12em; text-transform: uppercase; opacity: .85; padding: 0 14px; }
+.stamp-dl { right: clamp(16px, 3vw, 40px); top: -38px; }
+.stamp-ev { right: clamp(16px, 5vw, 80px); bottom: 14vh; }
+@keyframes bate { 0% { opacity: 0; transform: rotate(-13deg) scale(1.55); } 55% { opacity: 1; transform: rotate(-13deg) scale(.92); } 78% { transform: rotate(-13deg) scale(1.04); } 100% { opacity: .94; transform: rotate(-13deg) scale(1); } }
+@keyframes tinta { from { opacity: .7; transform: scale(1); } to { opacity: 0; transform: scale(1.7); } }
+.stamp.hit, .scrolly-pin:has(.rail span[data-n="4"].on) .stamp-ev { animation: bate .6s cubic-bezier(.2, 1.4, .4, 1) both; }
+.stamp.hit::after, .scrolly-pin:has(.rail span[data-n="4"].on) .stamp-ev::after { animation: tinta .8s var(--ease) .32s both; }
+
+/* sublinhado de tinta nos destaques do hero */
+.hero-h1 em { text-decoration: underline; text-decoration-color: rgb(110 224 168 / .35); text-decoration-thickness: 2px; text-underline-offset: .14em; }
+@media (max-width: 720px) { .stamp-dl { top: -30px; width: 100px; } .stamp-ev { display: none; } }
+.hero-h1 { font-size: clamp(30px, 3.2vw, 52px); }
+.foot-mark { font-size: clamp(36px, 8.6vw, 140px); white-space: nowrap; letter-spacing: -.03em; }

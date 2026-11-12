@@ -513,3 +513,16 @@
     b.addEventListener('pointerleave', () => { if (raf) cancelAnimationFrame(raf); raf = 0; for (const k of ['--lx', '--ly', '--la']) b.style.removeProperty(k); });
   }
 })();
+
+// Cartório escuro: carimbo do painel de download bate ao entrar na tela, títulos entram palavra por palavra e o papel de segurança sobe com a rolagem.
+(() => {
+  const root = document.documentElement;
+  const stamp = document.querySelector('.stamp-dl');
+  if (stamp && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => { for (const e of es) if (e.isIntersecting) { stamp.classList.add('hit'); io.disconnect(); } }, { threshold: .55 });
+    io.observe(document.querySelector('.dl-panel') || stamp);
+  } else if (stamp) stamp.classList.add('hit');
+  let raf = 0;
+  const paint = () => { raf = 0; root.style.setProperty('--gy', Math.min(640, scrollY * .07).toFixed(1)); };
+  addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(paint); }, { passive: true });
+})();

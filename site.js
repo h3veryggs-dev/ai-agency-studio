@@ -200,9 +200,9 @@
     st.classList.add('on');
     // quadros-chave: z = zoom, cx/cy = ponto da janela no centro da tela, ry = deslocamento vertical inicial (fração da altura), wo = janela, ao = aprovação, h = realces
     var K = [{ p: 0, z: .58, cx: .5, cy: .5, ry: .34, wo: 1, ao: 0, h: [0, 0, 0] }, { p: .14, z: 1, cx: .5, cy: .5, ry: 0, wo: 1, ao: 0, h: [0, 0, 0] },
-      { p: .26, z: 1.9, cx: .6, cy: .235, ry: 0, wo: 1, ao: 0, h: [1, 0, 0] }, { p: .4, z: 1.45, cx: .6, cy: .46, ry: 0, wo: 1, ao: 0, h: [0, 1, 0] }, { p: .52, z: 1.45, cx: .6, cy: .46, ry: 0, wo: 1, ao: 0, h: [0, 1, 0] },
+      { p: .26, z: 1.9, cx: .6, cy: .32, ry: 0, wo: 1, ao: 0, h: [1, 0, 0] }, { p: .4, z: 1.45, cx: .6, cy: .535, ry: 0, wo: 1, ao: 0, h: [0, 1, 0] }, { p: .52, z: 1.45, cx: .6, cy: .535, ry: 0, wo: 1, ao: 0, h: [0, 1, 0] },
       { p: .6, z: .9, cx: .5, cy: .5, ry: 0, wo: .3, ao: 1, h: [0, 0, 0] }, { p: .74, z: .9, cx: .5, cy: .5, ry: 0, wo: .3, ao: 1, h: [0, 0, 0] },
-      { p: .82, z: 1.6, cx: .6, cy: .78, ry: 0, wo: 1, ao: 0, h: [0, 0, 1] }, { p: .94, z: 1.6, cx: .6, cy: .78, ry: 0, wo: 1, ao: 0, h: [0, 0, 1] }, { p: 1, z: 1, cx: .5, cy: .5, ry: 0, wo: 1, ao: 0, h: [0, 0, 0] }];
+      { p: .82, z: 1.6, cx: .6, cy: .79, ry: 0, wo: 1, ao: 0, h: [0, 0, 1] }, { p: .94, z: 1.6, cx: .6, cy: .79, ry: 0, wo: 1, ao: 0, h: [0, 0, 1] }, { p: 1, z: 1, cx: .5, cy: .5, ry: 0, wo: 1, ao: 0, h: [0, 0, 0] }];
     var cur = 0, vel = 0, target = 0, raf = 0, last = 0, step = 0, top = 0, range = 1, fac = 1, W = 0, H = 0, vh = 1;
     function sm(t) { return t * t * (3 - 2 * t); }
     function lerp(a, b, t) { return a + (b - a) * t; }
